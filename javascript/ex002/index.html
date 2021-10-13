@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt.br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>looping javascript</title>
+</head>
+<body>
+    <h1>testando loopings</h1>
+    <button onclick="contar()">vai!</button>
+    <script>
+        function contar() {
+            let inicio = Number(prompt("numero inicial"))
+            let fim = Number(prompt("numero final")) 
+            let n = inicio
+            while (n <= fim) {
+                document.writeln(`Looping ${n}<br>`)
+                n++
+            }
+            document.writeln("ACABOU!")
+        }
+    </script>
+</body>
+
+</html>
