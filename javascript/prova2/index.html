@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova etapa 2</title>
+</head>
+<style>
+    main {
+        text-align: center;
+        font-size: 30px;
+    } button {
+        font-size: 30px;
+        border-radius: 10px;
+        border-width: 3px;
+        color: white;
+        background-color: green;
+        border-color: rgb(6, 65, 6);
+    }
+</style>
+<body>
+    <main>
+        <h1>Calculadora especial</h1>
+        <button onclick = "calcular()">Calcular</button>
+        <p id="resultado">\\O resultado vai aparecer aqui//</p>
+    </main>
+    <script>
+        let resultado = document.getElementById("resultado")
+        function calcular() {
+            let num1 = Number(prompt("Digite o 1º número"))
+            let num2 = Number(prompt("Digite o 2º número"))
+             
+            resultado.innerHTML = `A valor da soma entre os números é ${num1 + num2}<br>O valor da multiplicação entre os números é ${num1 * num2}<br>O valor da divisão entre os números é ${num1 / num2}<br>O valor da potência entre os números é ${num1 ** num2}`
+        }
+    
+    </script>
+</body>
+</html>

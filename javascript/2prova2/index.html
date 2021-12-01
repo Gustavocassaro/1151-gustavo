@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prova 2 etapa 2</title>
+</head>
+<style>
+    main {
+        text-align: center;
+        font-size: 30px;
+    } #but {
+        font-size: 30px;
+        border-radius: 10px;
+        border-width: 3px;
+        color: white;
+        background-color: green;
+        border-color: rgb(6, 65, 6);
+    }
+</style>
+<body>
+    <main>
+        <h1>Calculadora especial</h1>
+        <form action="salvar.php" method="get" onsubmit="return calcular()">
+            <label for="num1">Primeiro número</label>
+            <input type="number" name="num1" id="num1"><br>
+            <br><label for="num2">Segundo número</label>
+            <input type="number" name="num2" id="num2"><br>
+            <br><input type="submit" value="Calcular" id="but">
+        </form>
+        <p id="resultado">\\O resultado vai aparecer aqui//</p>
+    </main>
+    <script>
+        let resultado = document.getElementById("resultado")
+        function calcular() {
+            let num1 = Number(document.getElementById("num1").value)
+            let num2 = Number(document.getElementById("num2").value)
+
+            resultado.innerHTML = `A valor da soma entre os números é ${num1 + num2}<br>O valor da multiplicação entre os números é ${num1 * num2}<br>O valor da divisão entre os números é ${num1 / num2}<br>O valor da potência entre os números é ${num1 ** num2}`
+            
+            return false
+        }
+    </script>    
+</body>
+</html>
